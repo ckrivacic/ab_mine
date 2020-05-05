@@ -133,6 +133,7 @@ def cluster_run():
         
             minimize = False
             kic = False
+            lhk = False
             random = False
 
             if protocol=='score':
@@ -156,7 +157,7 @@ def cluster_run():
                         pdb, j))
                 #try:
                 row = score_ab(pose, minimize=minimize, 
-                        kic=kic, random=random)
+                        kic=kic, random=random, lhk=lhk)
                 print(row)
                 if row==0:
                     print('PDB {} had fewer than 6 residues in loop'.format(pdb))
